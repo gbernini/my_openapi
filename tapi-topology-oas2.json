@@ -1,0 +1,3142 @@
+
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Title was not specified"
+  },
+  "paths": {
+    "/restconf/operations/tapi-topology:get-topology-details": {
+      "post": {
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/(get-topology-details)output-TOP"
+            }
+          }
+        },
+        "description": "",
+        "operationId": "get-topology-details",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "description": null,
+            "name": null,
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/(get-topology-details)input-TOP"
+            }
+          }
+        ]
+      }
+    },
+    "/restconf/operations/tapi-topology:get-link-details": {
+      "post": {
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/(get-link-details)output-TOP"
+            }
+          }
+        },
+        "description": "",
+        "operationId": "get-link-details",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "description": null,
+            "name": null,
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/(get-link-details)input-TOP"
+            }
+          }
+        ]
+      }
+    },
+    "/restconf/operations/tapi-topology:get-node-details": {
+      "post": {
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/(get-node-details)output-TOP"
+            }
+          }
+        },
+        "description": "",
+        "operationId": "get-node-details",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "description": null,
+            "name": null,
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/(get-node-details)input-TOP"
+            }
+          }
+        ]
+      }
+    },
+    "/restconf/operations/tapi-topology:get-node-edge-point-details": {
+      "post": {
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/(get-node-edge-point-details)output-TOP"
+            }
+          }
+        },
+        "description": "",
+        "operationId": "get-node-edge-point-details",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "description": null,
+            "name": null,
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/(get-node-edge-point-details)input-TOP"
+            }
+          }
+        ]
+      }
+    },
+    "/restconf/operations/tapi-topology:get-topology-list": {
+      "post": {
+        "responses": {
+          "200": {
+            "description": "No response was specified",
+            "schema": {
+              "$ref": "#/definitions/(get-topology-list)output-TOP"
+            }
+          }
+        },
+        "description": "",
+        "operationId": "get-topology-list",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ]
+      }
+    }
+  },
+  "host": "localhost:8181",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "definitions": {
+    "unique_empty_identifier": {},
+    "(config)tapi-topology_modulePOST": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {}
+    },
+    "(get-topology-details)input": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:topology-id-or-name": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "(get-topology-details)input-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:input": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "tapi-topology/topology/node/owned-node-edge-point(config)aggregated-node-edge-point": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:node-edge-point-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:node-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:topology-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "(config)aggregated-node-edge-pointPOST": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "node-edge-point-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "node-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "topology-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/topology/node/owned-node-edge-point(config)aggregated-node-edge-point-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:aggregated-node-edge-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/owned-node-edge-point(config)aggregated-node-edge-point"
+          },
+          "description": "none"
+        }
+      }
+    },
+    "tapi-topology/topology/node/owned-node-edge-point(config)mapped-service-interface-point": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:service-interface-point-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "(config)mapped-service-interface-pointPOST": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "service-interface-point-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/topology/node/owned-node-edge-point(config)mapped-service-interface-point-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:mapped-service-interface-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/owned-node-edge-point(config)mapped-service-interface-point"
+          },
+          "description": "NodeEdgePoint mapped to more than ServiceInterfacePoint (slicing/virtualizing) or a ServiceInterfacePoint mapped to more than one NodeEdgePoint (load balancing/Resilience) should be considered experimental"
+        }
+      }
+    },
+    "tapi-topology/topology/node/owned-node-edge-point(config)name": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:value-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:value": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "(config)namePOST": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "value-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "value": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/topology/node/owned-node-edge-point(config)name-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/owned-node-edge-point(config)name"
+          },
+          "description": "List of names. A property of an entity with a value that is unique in some namespace but may change during the life of the entity. A name carries no semantics with respect to the purpose of the entity."
+        }
+      }
+    },
+    "tapi-topology/topology/node(config)owned-node-edge-point": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:layer-protocol-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:supported-cep-layer-protocol-qualifier": {
+          "type": "array",
+          "items": {
+            "type": "Optional.empty"
+          },
+          "description": "none"
+        },
+        "tapi-topology:aggregated-node-edge-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/owned-node-edge-point(config)aggregated-node-edge-point"
+          },
+          "description": "none"
+        },
+        "tapi-topology:mapped-service-interface-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/owned-node-edge-point(config)mapped-service-interface-point"
+          },
+          "description": "NodeEdgePoint mapped to more than ServiceInterfacePoint (slicing/virtualizing) or a ServiceInterfacePoint mapped to more than one NodeEdgePoint (load balancing/Resilience) should be considered experimental"
+        },
+        "tapi-topology:link-port-direction": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:link-port-role": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:administrative-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:operational-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:lifecycle-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:termination-direction": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:termination-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/owned-node-edge-point(config)name"
+          },
+          "description": "List of names. A property of an entity with a value that is unique in some namespace but may change during the life of the entity. A name carries no semantics with respect to the purpose of the entity."
+        }
+      }
+    },
+    "(config)owned-node-edge-pointPOST": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "layer-protocol-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "aggregated-node-edge-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/owned-node-edge-point(config)aggregated-node-edge-point"
+          }
+        },
+        "mapped-service-interface-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/owned-node-edge-point(config)mapped-service-interface-point"
+          }
+        },
+        "link-port-direction": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "link-port-role": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "administrative-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "operational-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "lifecycle-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "termination-direction": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "termination-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/owned-node-edge-point(config)name"
+          }
+        },
+        "total-potential-capacity": {
+          "$ref": "#/definitions/object"
+        },
+        "available-capacity": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "tapi-topology/topology/node(config)owned-node-edge-point-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:owned-node-edge-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node(config)owned-node-edge-point"
+          },
+          "description": "none"
+        }
+      }
+    },
+    "tapi-topology/topology/node/node-rule-group/rule(config)name": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:value-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:value": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/topology/node/node-rule-group/rule(config)name-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/node-rule-group/rule(config)name"
+          },
+          "description": "List of names. A property of an entity with a value that is unique in some namespace but may change during the life of the entity. A name carries no semantics with respect to the purpose of the entity."
+        }
+      }
+    },
+    "tapi-topology/topology/node/node-rule-group(config)rule": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:local-id": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/node-rule-group/rule(config)name"
+          },
+          "description": "List of names. A property of an entity with a value that is unique in some namespace but may change during the life of the entity. A name carries no semantics with respect to the purpose of the entity."
+        }
+      }
+    },
+    "(config)rulePOST": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "rule-type": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "forwarding-rule": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "override-priority": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "cep-port-role": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/node-rule-group/rule(config)cep-port-role"
+          }
+        },
+        "connection-spec-reference": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/node-rule-group/rule(config)connection-spec-reference"
+          }
+        },
+        "signal-property": {
+          "$ref": "#/definitions/object"
+        },
+        "local-id": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/node-rule-group/rule(config)name"
+          }
+        }
+      }
+    },
+    "tapi-topology/topology/node/node-rule-group(config)rule-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:rule": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/node-rule-group(config)rule"
+          },
+          "description": "The list of rules of the NodeRuleGroup."
+        }
+      }
+    },
+    "tapi-topology/topology/node/node-rule-group(config)node-edge-point": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:node-edge-point-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:node-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:topology-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "(config)node-edge-pointPOST": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "node-edge-point-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "node-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "topology-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/topology/node/node-rule-group(config)node-edge-point-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:node-edge-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/node-rule-group(config)node-edge-point"
+          },
+          "description": "NEPs and their client CEPs that the rules apply to."
+        }
+      }
+    },
+    "tapi-topology/topology/node/node-rule-group(config)cost-characteristic": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:cost-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:cost-value": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:cost-algorithm": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "(config)cost-characteristicPOST": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "cost-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "cost-value": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "cost-algorithm": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/topology/node/node-rule-group(config)cost-characteristic-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:cost-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/node-rule-group(config)cost-characteristic"
+          },
+          "description": "The list of costs where each cost relates to some aspect of the TopologicalEntity."
+        }
+      }
+    },
+    "tapi-topology/topology/node/node-rule-group(config)latency-characteristic": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:traffic-property-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:fixed-latency-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:queing-latency-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:jitter-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:wander-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "(config)latency-characteristicPOST": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "traffic-property-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "fixed-latency-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "queing-latency-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "jitter-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "wander-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/topology/node/node-rule-group(config)latency-characteristic-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:latency-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/node-rule-group(config)latency-characteristic"
+          },
+          "description": "The effect on the latency of a queuing process. This only has significant effect for packet based systems and has a complex characteristic."
+        }
+      }
+    },
+    "tapi-topology/topology/node/node-rule-group(config)risk-characteristic": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:risk-characteristic-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:risk-identifier-list": {
+          "type": "array",
+          "items": {
+            "type": "Optional.empty"
+          },
+          "description": "A list of the identifiers of each physical/geographic unit (with the specific risk characteristic) that is related to a segment of the TopologicalEntity."
+        }
+      }
+    },
+    "(config)risk-characteristicPOST": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "risk-characteristic-name": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/topology/node/node-rule-group(config)risk-characteristic-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:risk-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/node-rule-group(config)risk-characteristic"
+          },
+          "description": "A list of risk characteristics for consideration in an analysis of shared risk. Each element of the list represents a specific risk consideration."
+        }
+      }
+    },
+    "tapi-topology/topology/node/node-rule-group(config)name": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:value-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:value": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/topology/node/node-rule-group(config)name-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/node-rule-group(config)name"
+          },
+          "description": "List of names. A property of an entity with a value that is unique in some namespace but may change during the life of the entity. A name carries no semantics with respect to the purpose of the entity."
+        }
+      }
+    },
+    "tapi-topology/topology/node(config)node-rule-group": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:rule": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/node-rule-group(config)rule"
+          },
+          "description": "The list of rules of the NodeRuleGroup."
+        },
+        "tapi-topology:node-edge-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/node-rule-group(config)node-edge-point"
+          },
+          "description": "NEPs and their client CEPs that the rules apply to."
+        },
+        "tapi-topology:cost-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/node-rule-group(config)cost-characteristic"
+          },
+          "description": "The list of costs where each cost relates to some aspect of the TopologicalEntity."
+        },
+        "tapi-topology:latency-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/node-rule-group(config)latency-characteristic"
+          },
+          "description": "The effect on the latency of a queuing process. This only has significant effect for packet based systems and has a complex characteristic."
+        },
+        "tapi-topology:risk-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/node-rule-group(config)risk-characteristic"
+          },
+          "description": "A list of risk characteristics for consideration in an analysis of shared risk. Each element of the list represents a specific risk consideration."
+        },
+        "tapi-topology:uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/node-rule-group(config)name"
+          },
+          "description": "List of names. A property of an entity with a value that is unique in some namespace but may change during the life of the entity. A name carries no semantics with respect to the purpose of the entity."
+        }
+      }
+    },
+    "(config)node-rule-groupPOST": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "rule": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/node-rule-group(config)rule"
+          }
+        },
+        "node-edge-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/node-rule-group(config)node-edge-point"
+          }
+        },
+        "node-rule-group": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/node-rule-group(config)node-rule-group"
+          }
+        },
+        "inter-rule-group": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/node-rule-group(config)inter-rule-group"
+          }
+        },
+        "cost-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/node-rule-group(config)cost-characteristic"
+          }
+        },
+        "latency-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/node-rule-group(config)latency-characteristic"
+          }
+        },
+        "risk-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/node-rule-group(config)risk-characteristic"
+          }
+        },
+        "uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node/node-rule-group(config)name"
+          }
+        },
+        "total-potential-capacity": {
+          "$ref": "#/definitions/object"
+        },
+        "available-capacity": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "tapi-topology/topology/node(config)node-rule-group-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:node-rule-group": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node(config)node-rule-group"
+          },
+          "description": "none"
+        }
+      }
+    },
+    "tapi-topology/topology/node(config)latency-characteristic": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:traffic-property-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:fixed-latency-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:queing-latency-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:jitter-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:wander-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/topology/node(config)latency-characteristic-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:latency-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node(config)latency-characteristic"
+          },
+          "description": "The effect on the latency of a queuing process. This only has significant effect for packet based systems and has a complex characteristic."
+        }
+      }
+    },
+    "tapi-topology/topology/node(config)cost-characteristic": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:cost-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:cost-value": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:cost-algorithm": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/topology/node(config)cost-characteristic-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:cost-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node(config)cost-characteristic"
+          },
+          "description": "The list of costs where each cost relates to some aspect of the TopologicalEntity."
+        }
+      }
+    },
+    "tapi-topology/topology/node(config)name": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:value-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:value": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/topology/node(config)name-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node(config)name"
+          },
+          "description": "List of names. A property of an entity with a value that is unique in some namespace but may change during the life of the entity. A name carries no semantics with respect to the purpose of the entity."
+        }
+      }
+    },
+    "tapi-topology/topology(config)node": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:owned-node-edge-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node(config)owned-node-edge-point"
+          },
+          "description": "none"
+        },
+        "tapi-topology:node-rule-group": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node(config)node-rule-group"
+          },
+          "description": "none"
+        },
+        "tapi-topology:layer-protocol-name": {
+          "type": "array",
+          "items": {
+            "type": "Optional.empty"
+          },
+          "description": "none"
+        },
+        "tapi-topology:latency-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node(config)latency-characteristic"
+          },
+          "description": "The effect on the latency of a queuing process. This only has significant effect for packet based systems and has a complex characteristic."
+        },
+        "tapi-topology:cost-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node(config)cost-characteristic"
+          },
+          "description": "The list of costs where each cost relates to some aspect of the TopologicalEntity."
+        },
+        "tapi-topology:administrative-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:operational-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:lifecycle-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node(config)name"
+          },
+          "description": "List of names. A property of an entity with a value that is unique in some namespace but may change during the life of the entity. A name carries no semantics with respect to the purpose of the entity."
+        }
+      }
+    },
+    "(config)nodePOST": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "owned-node-edge-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node(config)owned-node-edge-point"
+          }
+        },
+        "aggregated-node-edge-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node(config)aggregated-node-edge-point"
+          }
+        },
+        "node-rule-group": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node(config)node-rule-group"
+          }
+        },
+        "encap-topology": {
+          "$ref": "#/definitions/object"
+        },
+        "error-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "loss-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "repeat-delivery-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "delivery-order-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "unavailable-time-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "server-integrity-process-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "latency-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node(config)latency-characteristic"
+          }
+        },
+        "cost-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node(config)cost-characteristic"
+          }
+        },
+        "administrative-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "operational-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "lifecycle-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/node(config)name"
+          }
+        },
+        "total-potential-capacity": {
+          "$ref": "#/definitions/object"
+        },
+        "available-capacity": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "tapi-topology/topology(config)node-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:node": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology(config)node"
+          },
+          "description": "none"
+        }
+      }
+    },
+    "tapi-topology/topology/link(config)node-edge-point": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:node-edge-point-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:node-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:topology-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/topology/link(config)node-edge-point-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:node-edge-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/link(config)node-edge-point"
+          },
+          "description": "none"
+        }
+      }
+    },
+    "tapi-topology/topology/link(config)resilience-type": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:restoration-policy": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:protection-type": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "(config)resilience-typePOST": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "restoration-policy": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "protection-type": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/topology/link(config)resilience-type-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:resilience-type": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "tapi-topology/topology/link(config)cost-characteristic": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:cost-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:cost-value": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:cost-algorithm": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/topology/link(config)cost-characteristic-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:cost-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/link(config)cost-characteristic"
+          },
+          "description": "The list of costs where each cost relates to some aspect of the TopologicalEntity."
+        }
+      }
+    },
+    "tapi-topology/topology/link(config)latency-characteristic": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:traffic-property-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:fixed-latency-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:queing-latency-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:jitter-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:wander-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/topology/link(config)latency-characteristic-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:latency-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/link(config)latency-characteristic"
+          },
+          "description": "The effect on the latency of a queuing process. This only has significant effect for packet based systems and has a complex characteristic."
+        }
+      }
+    },
+    "tapi-topology/topology/link(config)validation-mechanism": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:validation-mechanism": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:layer-protocol-adjacency-validated": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:validation-robustness": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "(config)validation-mechanismPOST": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "validation-mechanism": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "layer-protocol-adjacency-validated": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "validation-robustness": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/topology/link(config)validation-mechanism-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:validation-mechanism": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/link(config)validation-mechanism"
+          },
+          "description": "Provides details of the specific validation mechanism(s) used to confirm the presence of an intended topologicalEntity."
+        }
+      }
+    },
+    "tapi-topology/topology/link(config)risk-characteristic": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:risk-characteristic-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:risk-identifier-list": {
+          "type": "array",
+          "items": {
+            "type": "Optional.empty"
+          },
+          "description": "A list of the identifiers of each physical/geographic unit (with the specific risk characteristic) that is related to a segment of the TopologicalEntity."
+        }
+      }
+    },
+    "tapi-topology/topology/link(config)risk-characteristic-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:risk-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/link(config)risk-characteristic"
+          },
+          "description": "A list of risk characteristics for consideration in an analysis of shared risk. Each element of the list represents a specific risk consideration."
+        }
+      }
+    },
+    "tapi-topology/topology/link(config)name": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:value-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:value": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/topology/link(config)name-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/link(config)name"
+          },
+          "description": "List of names. A property of an entity with a value that is unique in some namespace but may change during the life of the entity. A name carries no semantics with respect to the purpose of the entity."
+        }
+      }
+    },
+    "tapi-topology/topology(config)link": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:node-edge-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/link(config)node-edge-point"
+          },
+          "description": "none"
+        },
+        "tapi-topology:layer-protocol-name": {
+          "type": "array",
+          "items": {
+            "type": "Optional.empty"
+          },
+          "description": "none"
+        },
+        "tapi-topology:direction": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:resilience-type": {
+          "$ref": "#/definitions/object"
+        },
+        "tapi-topology:transitioned-layer-protocol-name": {
+          "type": "array",
+          "items": {
+            "type": "Optional.empty"
+          },
+          "description": "Provides the ordered structure of layer protocol transitions encapsulated in the TopologicalEntity. The ordering relates to the LinkPort role."
+        },
+        "tapi-topology:cost-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/link(config)cost-characteristic"
+          },
+          "description": "The list of costs where each cost relates to some aspect of the TopologicalEntity."
+        },
+        "tapi-topology:latency-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/link(config)latency-characteristic"
+          },
+          "description": "The effect on the latency of a queuing process. This only has significant effect for packet based systems and has a complex characteristic."
+        },
+        "tapi-topology:validation-mechanism": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/link(config)validation-mechanism"
+          },
+          "description": "Provides details of the specific validation mechanism(s) used to confirm the presence of an intended topologicalEntity."
+        },
+        "tapi-topology:risk-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/link(config)risk-characteristic"
+          },
+          "description": "A list of risk characteristics for consideration in an analysis of shared risk. Each element of the list represents a specific risk consideration."
+        },
+        "tapi-topology:administrative-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:operational-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:lifecycle-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/link(config)name"
+          },
+          "description": "List of names. A property of an entity with a value that is unique in some namespace but may change during the life of the entity. A name carries no semantics with respect to the purpose of the entity."
+        }
+      }
+    },
+    "(config)linkPOST": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "node-edge-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/link(config)node-edge-point"
+          }
+        },
+        "direction": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "resilience-type": {
+          "$ref": "#/definitions/object"
+        },
+        "error-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "loss-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "repeat-delivery-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "delivery-order-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "unavailable-time-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "server-integrity-process-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "cost-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/link(config)cost-characteristic"
+          }
+        },
+        "latency-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/link(config)latency-characteristic"
+          }
+        },
+        "validation-mechanism": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/link(config)validation-mechanism"
+          }
+        },
+        "risk-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/link(config)risk-characteristic"
+          }
+        },
+        "administrative-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "operational-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "lifecycle-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology/link(config)name"
+          }
+        },
+        "total-potential-capacity": {
+          "$ref": "#/definitions/object"
+        },
+        "available-capacity": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "tapi-topology/topology(config)link-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:link": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology(config)link"
+          },
+          "description": "none"
+        }
+      }
+    },
+    "tapi-topology/topology(config)name": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:value-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:value": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/topology(config)name-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology(config)name"
+          },
+          "description": "List of names. A property of an entity with a value that is unique in some namespace but may change during the life of the entity. A name carries no semantics with respect to the purpose of the entity."
+        }
+      }
+    },
+    "tapi-topology(config)topology": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:node": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology(config)node"
+          },
+          "description": "none"
+        },
+        "tapi-topology:link": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology(config)link"
+          },
+          "description": "none"
+        },
+        "tapi-topology:layer-protocol-name": {
+          "type": "array",
+          "items": {
+            "type": "Optional.empty"
+          },
+          "description": "none"
+        },
+        "tapi-topology:uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology(config)name"
+          },
+          "description": "List of names. A property of an entity with a value that is unique in some namespace but may change during the life of the entity. A name carries no semantics with respect to the purpose of the entity."
+        }
+      }
+    },
+    "(config)topologyPOST": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "node": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology(config)node"
+          }
+        },
+        "link": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology(config)link"
+          }
+        },
+        "uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/topology(config)name"
+          }
+        }
+      }
+    },
+    "tapi-topology(config)topology-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:topology": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology(config)topology"
+          },
+          "description": "none"
+        }
+      }
+    },
+    "(get-topology-details)output": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:topology": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "(get-topology-details)output-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:output": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "(get-link-details)input": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:topology-id-or-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:link-id-or-name": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "(get-link-details)input-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:input": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "tapi-topology/link(config)node-edge-point": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:node-edge-point-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:node-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:topology-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/link(config)node-edge-point-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:node-edge-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/link(config)node-edge-point"
+          },
+          "description": "none"
+        }
+      }
+    },
+    "tapi-topology/link(config)resilience-type": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:restoration-policy": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:protection-type": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/link(config)resilience-type-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:resilience-type": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "tapi-topology/link(config)cost-characteristic": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:cost-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:cost-value": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:cost-algorithm": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/link(config)cost-characteristic-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:cost-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/link(config)cost-characteristic"
+          },
+          "description": "The list of costs where each cost relates to some aspect of the TopologicalEntity."
+        }
+      }
+    },
+    "tapi-topology/link(config)latency-characteristic": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:traffic-property-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:fixed-latency-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:queing-latency-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:jitter-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:wander-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/link(config)latency-characteristic-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:latency-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/link(config)latency-characteristic"
+          },
+          "description": "The effect on the latency of a queuing process. This only has significant effect for packet based systems and has a complex characteristic."
+        }
+      }
+    },
+    "tapi-topology/link(config)validation-mechanism": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:validation-mechanism": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:layer-protocol-adjacency-validated": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:validation-robustness": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/link(config)validation-mechanism-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:validation-mechanism": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/link(config)validation-mechanism"
+          },
+          "description": "Provides details of the specific validation mechanism(s) used to confirm the presence of an intended topologicalEntity."
+        }
+      }
+    },
+    "tapi-topology/link(config)risk-characteristic": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:risk-characteristic-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:risk-identifier-list": {
+          "type": "array",
+          "items": {
+            "type": "Optional.empty"
+          },
+          "description": "A list of the identifiers of each physical/geographic unit (with the specific risk characteristic) that is related to a segment of the TopologicalEntity."
+        }
+      }
+    },
+    "tapi-topology/link(config)risk-characteristic-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:risk-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/link(config)risk-characteristic"
+          },
+          "description": "A list of risk characteristics for consideration in an analysis of shared risk. Each element of the list represents a specific risk consideration."
+        }
+      }
+    },
+    "tapi-topology/link(config)name": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:value-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:value": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/link(config)name-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/link(config)name"
+          },
+          "description": "List of names. A property of an entity with a value that is unique in some namespace but may change during the life of the entity. A name carries no semantics with respect to the purpose of the entity."
+        }
+      }
+    },
+    "tapi-topology(config)link": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:node-edge-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/link(config)node-edge-point"
+          },
+          "description": "none"
+        },
+        "tapi-topology:layer-protocol-name": {
+          "type": "array",
+          "items": {
+            "type": "Optional.empty"
+          },
+          "description": "none"
+        },
+        "tapi-topology:direction": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:resilience-type": {
+          "$ref": "#/definitions/object"
+        },
+        "tapi-topology:transitioned-layer-protocol-name": {
+          "type": "array",
+          "items": {
+            "type": "Optional.empty"
+          },
+          "description": "Provides the ordered structure of layer protocol transitions encapsulated in the TopologicalEntity. The ordering relates to the LinkPort role."
+        },
+        "tapi-topology:cost-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/link(config)cost-characteristic"
+          },
+          "description": "The list of costs where each cost relates to some aspect of the TopologicalEntity."
+        },
+        "tapi-topology:latency-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/link(config)latency-characteristic"
+          },
+          "description": "The effect on the latency of a queuing process. This only has significant effect for packet based systems and has a complex characteristic."
+        },
+        "tapi-topology:validation-mechanism": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/link(config)validation-mechanism"
+          },
+          "description": "Provides details of the specific validation mechanism(s) used to confirm the presence of an intended topologicalEntity."
+        },
+        "tapi-topology:risk-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/link(config)risk-characteristic"
+          },
+          "description": "A list of risk characteristics for consideration in an analysis of shared risk. Each element of the list represents a specific risk consideration."
+        },
+        "tapi-topology:administrative-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:operational-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:lifecycle-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/link(config)name"
+          },
+          "description": "List of names. A property of an entity with a value that is unique in some namespace but may change during the life of the entity. A name carries no semantics with respect to the purpose of the entity."
+        }
+      }
+    },
+    "tapi-topology(config)link-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:link": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "(get-link-details)output": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:link": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "(get-link-details)output-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:output": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "(get-node-details)input": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:topology-id-or-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:node-id-or-name": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "(get-node-details)input-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:input": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "tapi-topology/node/owned-node-edge-point(config)aggregated-node-edge-point": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:node-edge-point-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:node-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:topology-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/node/owned-node-edge-point(config)aggregated-node-edge-point-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:aggregated-node-edge-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node/owned-node-edge-point(config)aggregated-node-edge-point"
+          },
+          "description": "none"
+        }
+      }
+    },
+    "tapi-topology/node/owned-node-edge-point(config)mapped-service-interface-point": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:service-interface-point-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/node/owned-node-edge-point(config)mapped-service-interface-point-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:mapped-service-interface-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node/owned-node-edge-point(config)mapped-service-interface-point"
+          },
+          "description": "NodeEdgePoint mapped to more than ServiceInterfacePoint (slicing/virtualizing) or a ServiceInterfacePoint mapped to more than one NodeEdgePoint (load balancing/Resilience) should be considered experimental"
+        }
+      }
+    },
+    "tapi-topology/node/owned-node-edge-point(config)name": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:value-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:value": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/node/owned-node-edge-point(config)name-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node/owned-node-edge-point(config)name"
+          },
+          "description": "List of names. A property of an entity with a value that is unique in some namespace but may change during the life of the entity. A name carries no semantics with respect to the purpose of the entity."
+        }
+      }
+    },
+    "tapi-topology/node(config)owned-node-edge-point": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:layer-protocol-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:supported-cep-layer-protocol-qualifier": {
+          "type": "array",
+          "items": {
+            "type": "Optional.empty"
+          },
+          "description": "none"
+        },
+        "tapi-topology:aggregated-node-edge-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node/owned-node-edge-point(config)aggregated-node-edge-point"
+          },
+          "description": "none"
+        },
+        "tapi-topology:mapped-service-interface-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node/owned-node-edge-point(config)mapped-service-interface-point"
+          },
+          "description": "NodeEdgePoint mapped to more than ServiceInterfacePoint (slicing/virtualizing) or a ServiceInterfacePoint mapped to more than one NodeEdgePoint (load balancing/Resilience) should be considered experimental"
+        },
+        "tapi-topology:link-port-direction": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:link-port-role": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:administrative-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:operational-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:lifecycle-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:termination-direction": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:termination-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node/owned-node-edge-point(config)name"
+          },
+          "description": "List of names. A property of an entity with a value that is unique in some namespace but may change during the life of the entity. A name carries no semantics with respect to the purpose of the entity."
+        }
+      }
+    },
+    "tapi-topology/node(config)owned-node-edge-point-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:owned-node-edge-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node(config)owned-node-edge-point"
+          },
+          "description": "none"
+        }
+      }
+    },
+    "tapi-topology/node/node-rule-group/rule(config)name": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:value-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:value": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/node/node-rule-group/rule(config)name-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node/node-rule-group/rule(config)name"
+          },
+          "description": "List of names. A property of an entity with a value that is unique in some namespace but may change during the life of the entity. A name carries no semantics with respect to the purpose of the entity."
+        }
+      }
+    },
+    "tapi-topology/node/node-rule-group(config)rule": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:local-id": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node/node-rule-group/rule(config)name"
+          },
+          "description": "List of names. A property of an entity with a value that is unique in some namespace but may change during the life of the entity. A name carries no semantics with respect to the purpose of the entity."
+        }
+      }
+    },
+    "tapi-topology/node/node-rule-group(config)rule-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:rule": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node/node-rule-group(config)rule"
+          },
+          "description": "The list of rules of the NodeRuleGroup."
+        }
+      }
+    },
+    "tapi-topology/node/node-rule-group(config)node-edge-point": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:node-edge-point-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:node-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:topology-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/node/node-rule-group(config)node-edge-point-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:node-edge-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node/node-rule-group(config)node-edge-point"
+          },
+          "description": "NEPs and their client CEPs that the rules apply to."
+        }
+      }
+    },
+    "tapi-topology/node/node-rule-group(config)cost-characteristic": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:cost-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:cost-value": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:cost-algorithm": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/node/node-rule-group(config)cost-characteristic-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:cost-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node/node-rule-group(config)cost-characteristic"
+          },
+          "description": "The list of costs where each cost relates to some aspect of the TopologicalEntity."
+        }
+      }
+    },
+    "tapi-topology/node/node-rule-group(config)latency-characteristic": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:traffic-property-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:fixed-latency-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:queing-latency-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:jitter-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:wander-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/node/node-rule-group(config)latency-characteristic-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:latency-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node/node-rule-group(config)latency-characteristic"
+          },
+          "description": "The effect on the latency of a queuing process. This only has significant effect for packet based systems and has a complex characteristic."
+        }
+      }
+    },
+    "tapi-topology/node/node-rule-group(config)risk-characteristic": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:risk-characteristic-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:risk-identifier-list": {
+          "type": "array",
+          "items": {
+            "type": "Optional.empty"
+          },
+          "description": "A list of the identifiers of each physical/geographic unit (with the specific risk characteristic) that is related to a segment of the TopologicalEntity."
+        }
+      }
+    },
+    "tapi-topology/node/node-rule-group(config)risk-characteristic-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:risk-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node/node-rule-group(config)risk-characteristic"
+          },
+          "description": "A list of risk characteristics for consideration in an analysis of shared risk. Each element of the list represents a specific risk consideration."
+        }
+      }
+    },
+    "tapi-topology/node/node-rule-group(config)name": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:value-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:value": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/node/node-rule-group(config)name-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node/node-rule-group(config)name"
+          },
+          "description": "List of names. A property of an entity with a value that is unique in some namespace but may change during the life of the entity. A name carries no semantics with respect to the purpose of the entity."
+        }
+      }
+    },
+    "tapi-topology/node(config)node-rule-group": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:rule": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node/node-rule-group(config)rule"
+          },
+          "description": "The list of rules of the NodeRuleGroup."
+        },
+        "tapi-topology:node-edge-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node/node-rule-group(config)node-edge-point"
+          },
+          "description": "NEPs and their client CEPs that the rules apply to."
+        },
+        "tapi-topology:cost-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node/node-rule-group(config)cost-characteristic"
+          },
+          "description": "The list of costs where each cost relates to some aspect of the TopologicalEntity."
+        },
+        "tapi-topology:latency-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node/node-rule-group(config)latency-characteristic"
+          },
+          "description": "The effect on the latency of a queuing process. This only has significant effect for packet based systems and has a complex characteristic."
+        },
+        "tapi-topology:risk-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node/node-rule-group(config)risk-characteristic"
+          },
+          "description": "A list of risk characteristics for consideration in an analysis of shared risk. Each element of the list represents a specific risk consideration."
+        },
+        "tapi-topology:uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node/node-rule-group(config)name"
+          },
+          "description": "List of names. A property of an entity with a value that is unique in some namespace but may change during the life of the entity. A name carries no semantics with respect to the purpose of the entity."
+        }
+      }
+    },
+    "tapi-topology/node(config)node-rule-group-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:node-rule-group": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node(config)node-rule-group"
+          },
+          "description": "none"
+        }
+      }
+    },
+    "tapi-topology/node(config)latency-characteristic": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:traffic-property-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:fixed-latency-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:queing-latency-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:jitter-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:wander-characteristic": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/node(config)latency-characteristic-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:latency-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node(config)latency-characteristic"
+          },
+          "description": "The effect on the latency of a queuing process. This only has significant effect for packet based systems and has a complex characteristic."
+        }
+      }
+    },
+    "tapi-topology/node(config)cost-characteristic": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:cost-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:cost-value": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:cost-algorithm": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/node(config)cost-characteristic-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:cost-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node(config)cost-characteristic"
+          },
+          "description": "The list of costs where each cost relates to some aspect of the TopologicalEntity."
+        }
+      }
+    },
+    "tapi-topology/node(config)name": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:value-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:value": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/node(config)name-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node(config)name"
+          },
+          "description": "List of names. A property of an entity with a value that is unique in some namespace but may change during the life of the entity. A name carries no semantics with respect to the purpose of the entity."
+        }
+      }
+    },
+    "tapi-topology(config)node": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:owned-node-edge-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node(config)owned-node-edge-point"
+          },
+          "description": "none"
+        },
+        "tapi-topology:node-rule-group": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node(config)node-rule-group"
+          },
+          "description": "none"
+        },
+        "tapi-topology:layer-protocol-name": {
+          "type": "array",
+          "items": {
+            "type": "Optional.empty"
+          },
+          "description": "none"
+        },
+        "tapi-topology:latency-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node(config)latency-characteristic"
+          },
+          "description": "The effect on the latency of a queuing process. This only has significant effect for packet based systems and has a complex characteristic."
+        },
+        "tapi-topology:cost-characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node(config)cost-characteristic"
+          },
+          "description": "The list of costs where each cost relates to some aspect of the TopologicalEntity."
+        },
+        "tapi-topology:administrative-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:operational-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:lifecycle-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node(config)name"
+          },
+          "description": "List of names. A property of an entity with a value that is unique in some namespace but may change during the life of the entity. A name carries no semantics with respect to the purpose of the entity."
+        }
+      }
+    },
+    "tapi-topology(config)node-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:node": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "(get-node-details)output": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:node": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "(get-node-details)output-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:output": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "(get-node-edge-point-details)input": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:topology-id-or-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:node-id-or-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:ep-id-or-name": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "(get-node-edge-point-details)input-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:input": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "tapi-topology/node-edge-point(config)aggregated-node-edge-point": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:node-edge-point-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:node-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:topology-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/node-edge-point(config)aggregated-node-edge-point-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:aggregated-node-edge-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node-edge-point(config)aggregated-node-edge-point"
+          },
+          "description": "none"
+        }
+      }
+    },
+    "tapi-topology/node-edge-point(config)mapped-service-interface-point": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:service-interface-point-uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/node-edge-point(config)mapped-service-interface-point-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:mapped-service-interface-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node-edge-point(config)mapped-service-interface-point"
+          },
+          "description": "NodeEdgePoint mapped to more than ServiceInterfacePoint (slicing/virtualizing) or a ServiceInterfacePoint mapped to more than one NodeEdgePoint (load balancing/Resilience) should be considered experimental"
+        }
+      }
+    },
+    "tapi-topology/node-edge-point(config)name": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:value-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:value": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/node-edge-point(config)name-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node-edge-point(config)name"
+          },
+          "description": "List of names. A property of an entity with a value that is unique in some namespace but may change during the life of the entity. A name carries no semantics with respect to the purpose of the entity."
+        }
+      }
+    },
+    "tapi-topology/node-edge-point/media-channel-node-edge-point-spec/mc-pool/supportable-spectrum(config)frequency-constraint": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:tapi-photonic-media:adjustment-granularity": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:tapi-photonic-media:grid-type": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "(config)frequency-constraintPOST": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "adjustment-granularity": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "grid-type": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/node-edge-point/media-channel-node-edge-point-spec/mc-pool/supportable-spectrum(config)frequency-constraint-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:frequency-constraint": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "tapi-topology/node-edge-point/media-channel-node-edge-point-spec/mc-pool(config)supportable-spectrum": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:tapi-photonic-media:upper-frequency": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:tapi-photonic-media:lower-frequency": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:tapi-photonic-media:frequency-constraint": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "(config)supportable-spectrumPOST": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "upper-frequency": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "lower-frequency": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "frequency-constraint": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "tapi-topology/node-edge-point/media-channel-node-edge-point-spec/mc-pool(config)supportable-spectrum-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:supportable-spectrum": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node-edge-point/media-channel-node-edge-point-spec/mc-pool(config)supportable-spectrum"
+          },
+          "description": "none"
+        }
+      }
+    },
+    "tapi-topology/node-edge-point/media-channel-node-edge-point-spec/mc-pool/available-spectrum(config)frequency-constraint": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:tapi-photonic-media:adjustment-granularity": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:tapi-photonic-media:grid-type": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/node-edge-point/media-channel-node-edge-point-spec/mc-pool/available-spectrum(config)frequency-constraint-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:frequency-constraint": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "tapi-topology/node-edge-point/media-channel-node-edge-point-spec/mc-pool(config)available-spectrum": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:tapi-photonic-media:upper-frequency": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:tapi-photonic-media:lower-frequency": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:tapi-photonic-media:frequency-constraint": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "(config)available-spectrumPOST": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "upper-frequency": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "lower-frequency": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "frequency-constraint": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "tapi-topology/node-edge-point/media-channel-node-edge-point-spec/mc-pool(config)available-spectrum-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:available-spectrum": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node-edge-point/media-channel-node-edge-point-spec/mc-pool(config)available-spectrum"
+          },
+          "description": "none"
+        }
+      }
+    },
+    "tapi-topology/node-edge-point/media-channel-node-edge-point-spec/mc-pool/occupied-spectrum(config)frequency-constraint": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:tapi-photonic-media:adjustment-granularity": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:tapi-photonic-media:grid-type": {
+          "$ref": "#/definitions/Optional.empty"
+        }
+      }
+    },
+    "tapi-topology/node-edge-point/media-channel-node-edge-point-spec/mc-pool/occupied-spectrum(config)frequency-constraint-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:frequency-constraint": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "tapi-topology/node-edge-point/media-channel-node-edge-point-spec/mc-pool(config)occupied-spectrum": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:tapi-photonic-media:upper-frequency": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:tapi-photonic-media:lower-frequency": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:tapi-photonic-media:frequency-constraint": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "(config)occupied-spectrumPOST": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "upper-frequency": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "lower-frequency": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "frequency-constraint": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "tapi-topology/node-edge-point/media-channel-node-edge-point-spec/mc-pool(config)occupied-spectrum-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:occupied-spectrum": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node-edge-point/media-channel-node-edge-point-spec/mc-pool(config)occupied-spectrum"
+          },
+          "description": "none"
+        }
+      }
+    },
+    "tapi-topology/node-edge-point/media-channel-node-edge-point-spec(config)mc-pool": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:tapi-photonic-media:supportable-spectrum": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node-edge-point/media-channel-node-edge-point-spec/mc-pool(config)supportable-spectrum"
+          },
+          "description": "none"
+        },
+        "tapi-topology:tapi-photonic-media:available-spectrum": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node-edge-point/media-channel-node-edge-point-spec/mc-pool(config)available-spectrum"
+          },
+          "description": "none"
+        },
+        "tapi-topology:tapi-photonic-media:occupied-spectrum": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node-edge-point/media-channel-node-edge-point-spec/mc-pool(config)occupied-spectrum"
+          },
+          "description": "none"
+        }
+      }
+    },
+    "(config)mc-poolPOST": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "supportable-spectrum": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node-edge-point/media-channel-node-edge-point-spec/mc-pool(config)supportable-spectrum"
+          }
+        },
+        "available-spectrum": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node-edge-point/media-channel-node-edge-point-spec/mc-pool(config)available-spectrum"
+          }
+        },
+        "occupied-spectrum": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node-edge-point/media-channel-node-edge-point-spec/mc-pool(config)occupied-spectrum"
+          }
+        }
+      }
+    },
+    "tapi-topology/node-edge-point/media-channel-node-edge-point-spec(config)mc-pool-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:mc-pool": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "tapi-topology/node-edge-point(config)media-channel-node-edge-point-spec": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:tapi-photonic-media:mc-pool": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "(config)media-channel-node-edge-point-specPOST": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "mc-pool": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "tapi-topology/node-edge-point(config)media-channel-node-edge-point-spec-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:media-channel-node-edge-point-spec": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "tapi-topology(config)node-edge-point": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:layer-protocol-name": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:supported-cep-layer-protocol-qualifier": {
+          "type": "array",
+          "items": {
+            "type": "Optional.empty"
+          },
+          "description": "none"
+        },
+        "tapi-topology:aggregated-node-edge-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node-edge-point(config)aggregated-node-edge-point"
+          },
+          "description": "none"
+        },
+        "tapi-topology:mapped-service-interface-point": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node-edge-point(config)mapped-service-interface-point"
+          },
+          "description": "NodeEdgePoint mapped to more than ServiceInterfacePoint (slicing/virtualizing) or a ServiceInterfacePoint mapped to more than one NodeEdgePoint (load balancing/Resilience) should be considered experimental"
+        },
+        "tapi-topology:link-port-direction": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:link-port-role": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:administrative-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:operational-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:lifecycle-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:termination-direction": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:termination-state": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:uuid": {
+          "$ref": "#/definitions/Optional.empty"
+        },
+        "tapi-topology:name": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology/node-edge-point(config)name"
+          },
+          "description": "List of names. A property of an entity with a value that is unique in some namespace but may change during the life of the entity. A name carries no semantics with respect to the purpose of the entity."
+        },
+        "tapi-topology:tapi-photonic-media:media-channel-node-edge-point-spec": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "tapi-topology(config)node-edge-point-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:node-edge-point": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "(get-node-edge-point-details)output": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:node-edge-point": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "(get-node-edge-point-details)output-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:output": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "(get-topology-list)output": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:topology": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tapi-topology(config)topology"
+          },
+          "description": "none"
+        }
+      }
+    },
+    "(get-topology-list)output-TOP": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "properties": {
+        "tapi-topology:output": {
+          "$ref": "#/definitions/object"
+        }
+      }
+    },
+    "PORT_ROLE_RULE_OPTION_SAME_ROLE": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PORT_ROLE_RULE_OPTION"
+        },
+        {
+          "description": "The ports of the connection to which the rule applies must have the same role from the list in port role.",
+          "properties": {
+            "type": "PORT_ROLE_RULE_OPTION"
+          }
+        }
+      ]
+    },
+    "SIGNAL_PROPERTY_VALUE_RULE": {
+      "description": "none",
+      "properties": {}
+    },
+    "PORT_ROLE_RULE_OPTION": {
+      "description": "none",
+      "properties": {}
+    },
+    "SIGNAL_PROPERTY_VALUE_RULE_ANY_VALUE": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/SIGNAL_PROPERTY_VALUE_RULE"
+        },
+        {
+          "description": "The signal property of the cep to which the rule applies may take any identified value.",
+          "properties": {
+            "type": "SIGNAL_PROPERTY_VALUE_RULE"
+          }
+        }
+      ]
+    },
+    "PORT_ROLE_RULE_OPTION_NOT_ROLE": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PORT_ROLE_RULE_OPTION"
+        },
+        {
+          "description": "The ports of the connection to which the rule applies must not have any of the listed roles.",
+          "properties": {
+            "type": "PORT_ROLE_RULE_OPTION"
+          }
+        }
+      ]
+    },
+    "PORT_ROLE_RULE_OPTION_DIFFERENT_ROLE": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PORT_ROLE_RULE_OPTION"
+        },
+        {
+          "description": "The ports of the connection to which the rule applies must have different roles from the list in port role.",
+          "properties": {
+            "type": "PORT_ROLE_RULE_OPTION"
+          }
+        }
+      ]
+    },
+    "SIGNAL_PROPERTY_VALUE_RULE_SAME_VALUE": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/SIGNAL_PROPERTY_VALUE_RULE"
+        },
+        {
+          "description": "The signal property of the cep to which the rule applies must have the same value from the identied list.",
+          "properties": {
+            "type": "SIGNAL_PROPERTY_VALUE_RULE"
+          }
+        }
+      ]
+    },
+    "SIGNAL_PROPERTY_VALUE_RULE_NOT_VALUE": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/SIGNAL_PROPERTY_VALUE_RULE"
+        },
+        {
+          "description": "The signal property of the cep to which the rule applies must not have any of the identified values.",
+          "properties": {
+            "type": "SIGNAL_PROPERTY_VALUE_RULE"
+          }
+        }
+      ]
+    },
+    "PORT_ROLE_RULE_OPTION_ANY_ROLE": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/PORT_ROLE_RULE_OPTION"
+        },
+        {
+          "description": "The ports of the connection to which the rule applies may take any identified role.",
+          "properties": {
+            "type": "PORT_ROLE_RULE_OPTION"
+          }
+        }
+      ]
+    },
+    "SIGNAL_PROPERTY_VALUE_RULE_DIFFERENT_VALUE": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/SIGNAL_PROPERTY_VALUE_RULE"
+        },
+        {
+          "description": "The signal property of the cep to which the rule applies each must have different values from the identified list.",
+          "properties": {
+            "type": "SIGNAL_PROPERTY_VALUE_RULE"
+          }
+        }
+      ]
+    }
+  }
+}
+
